@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TKJ PROJECT</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="/gra.jpg/gra.jpg" rel="shortcut icon"/>
+
+	<link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<style>
+.sit {
+  background-color: transparent; /* Warna latar belakang tombol */
+  color: black; /* Warna teks tombol */
+  padding: 8px 41px; /* Ukuran tombol */
+  border:2px solid deepskyblue; /* Batas tombol */
+  border-radius: 5px; /* Sudut tombol */
+  cursor: none; /* Gaya cursor saat diarahkan ke tombol */
+  margin-left: auto;
+  margin:6px;
+  font-family: Iceland;
+}
+
+.stev {
+  background-color: dodgerblue; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  padding: 8px 41px; /* Ukuran tombol */
+  border:2px solid deepskyblue; /* Batas tombol */
+  border-radius: 5px; /* Sudut tombol */
+  cursor: none; /* Gaya cursor saat diarahkan ke tombol */
+  margin-left: auto;
+  margin:6px;
+  font-family: Iceland;
+}
+
+.bol:hover {
+  background-color: #5B5B5B; /* Warna latar belakang tombol saat dihover */
+}
+
+.stev:hover {
+  background-color: skyblue; /* Warna latar belakang tombol saat dihover */
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.navbar {
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.navbar .container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: 'Nova' Square; 
+}
+
+.navbar img {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  float: 100px;
+}
+
+#tombol-slidebar {
+  background-color: deepskyblue;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  cursor: none;
+}
+
+.slidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.slidebar.buka {
+  left: 0;
+}
+
+#tombol-tutup {
+  background-color: deepskyblue;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  align-self: flex-end; /* Memindahkan tombol ke kanan */
+  margin: 10px;
+}
+
+
+.slidebar font {
+  display: block;
+  padding: 5px;
+  height: 30px;
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box; /* Tambahkan ini */
+  cursor: none;
+}
+
+.slidebar a:hover {
+  background-color: #ddd;
+}
+
+.konten {
+  margin-left: 0;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+h3{
+display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: darkturquoise;
+  width: 100%;
+  box-sizing: border-box; /* Tambahkan ini */
+  font-family: 'Audiowide', sans-serif;
+}
+
+.tombol {
+  background-color: black; /* Warna latar belakang tombol */
+  color: whitesmoke; /* Warna teks tombol */
+  padding: 8px 50px; /* Ukuran tombol */
+  border:2px solid deepskyblue; /* Batas tombol */
+  border-radius: 5px; /* Sudut tombol */
+  cursor: none; /* Gaya cursor saat diarahkan ke tombol */
+  margin-left: auto;
+  margin:6px;
+  font-family: Iceland;
+}
+
+.bol:hover {
+  background-color: #5B5B5B; /* Warna latar belakang tombol saat dihover */
+}
+
+.tombol:hover {
+  background-color: #5B5B5B; /* Warna latar belakang tombol saat dihover */
+}
+
+.slidebar-content {
+  overflow-y: auto; /* Tambahkan scroll pada konten slidebar */
+  height: 100%; /* Isi tinggi slidebar */
+  padding-bottom: 60px; /* Tambahkan padding agar konten tidak tertutup tombol tutup */
+}
+
+h1{
+display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: deepskyblue;
+  width: 100%;
+  box-sizing: border-box; /* Tambahkan ini */
+  font-family: 'inter',sans-serif;
+}
+
+.gallery {
+  margin-top: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-item img {
+  width: 80%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 9px;
+  border:2px solid blue;
+  cursor:none;
+}
+
+p{
+margin: 9px;
+}
+</style>
+  <nav class="navbar">
+    <div class="container">
+      <div class="foto">
+    <img src="/pb.jpg" alt="" />
+  </div>
+      <font class="navbar-brand" href="#" face="courier new"><b>SMK PUJA BANGSA</b></font>
+      <button id="tombol-slidebar">Menu</button>
+    </div>
+  </nav>
+  <div class="slidebar" id="slidebar">
+  <div class="slidebar-content">
+    <button id="tombol-tutup">Tutup</button>
+    <h3><b>GAME PROJECT</b></h3>
+  <font face="Iceland" size="4" color="red"></font> 
+
+    
+    
+    <button class="tombol" onclick="alert('Update Belum Tersedia Di Versi Ini')">Update</button>
+    <button class="tombol" onclick="https://wa.me/6283871398679?text=Halo!%20Saya%20dari%20project%20game%20anda%20,saya%20ingin%20melaporkan%20Bug%20di%20dalam%20game%20anda">Report..</button>
+        <button class="tombol" onclick="https://wa.me/6283871398679">Contact</button>
+    <button class="tombol" onclick="alert('game ini sudah di update ke versi  2.0.0                                               support semua android')">About...</button>
+    <br><br><br><br><br>
+        <button class="tombol" onclick="alert('DEVELOPER BY GRAXPLOID / M ANGGRA')">Developer</button>
+            <button class="tombol" onclick="alert('| KELOMPOK 1 |   | X TKJ |   | PUJA BANGSA |')">MY TEAM.</button>
+      <button class="tombol" onclick="alert('game ini bertujuan untuk mengedukasi anak - anak karna game ini bisa untuk mengasah otak anak - anak dan belajar berpikir untuk menyelesaikan beberapa masalah atau tantangan contoh nya soal di dalam di game ini')">Informasi..</button>
+  </div>
+  </div>
+  <div class="konten">
+<center><h1><b>GAME EDUKASI</b></h1></center>
+<br><br>
+<font color="dodgerblue" size="4">⛔ DISKLIMER ⛔</font><br><br>
+
+<font color="blue" size="2"> Game Ini Buatan Karya Dari Kelas x Tkj Dilarang Mengcoppy Source Code Tanpa Izin Dari Devoloper Game. Selamat Menikmati Game Karya X Tkj</font><br><br><br><br>
+
+    <div class="gallery">
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src="/MTK.png" alt="Foto 1">
+        </div>
+        <div class="grid-item">
+          <img src="/Quiz.png" alt="Foto 2">
+        </div>
+        <div class="grid-item">
+          <img src="/aljabar.png" alt="Foto 3">
+        </div>
+      </div>
+    </div>
+   <button class="sit">MTK</button>
+   <button class="sit">QUIZ</button>
+   <button class="sit">MTK2</button> 
+  
+  <a href="/MTK.html"><button class="stev">play</button></a>
+  <a href="/Quiz.html"><button class="stev">play</button></a>
+   <a href="/aljabar.html"><button class="stev">play . . </button></a>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+alert ('selamat datang di game project karya anak tkj smk puja bangsa')
+alert ('Game ini tidak mengandung virus malware yang bisa mengambil data sensitif di dalam hp seperti "akun email & password, sms , otp dan lain lain"')
+alert ('untuk nama anggota kelompok di sini gak di tampilkan cuman nama kelompok nya saja !')
+const tombolSlidebar = document.getElementById('tombol-slidebar');
+const tombolTutup = document.getElementById('tombol-tutup');
+const slidebar = document.getElementById('slidebar');
+const konten = document.querySelector('.konten');
+
+tombolSlidebar.addEventListener('click', () => {
+  slidebar.classList.add('buka');
+  konten.classList.add('slidebar-buka');
+});
+
+tombolTutup.addEventListener('click', () => {
+  slidebar.classList.remove('buka');
+  konten.classList.remove('slidebar-buka');
+});
+
+</script>
